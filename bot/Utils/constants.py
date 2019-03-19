@@ -26,6 +26,8 @@ class MimeType:
 
 
 class BotMessage:
+    upload_failed = "آپلود انجام نشد"
+    full_report_body = "گزارش"
     state_choosed = "استان *{}*"
     state_coming_soon = "نقشه راه های استان *{}* در حال آماده سازی است..."
     traffic_between_state = "تصویر مروبط به ترافیک بین شهری استان  *{state}*"
@@ -68,6 +70,7 @@ class SendingAttempt:
 
 
 class Step:
+    upload_fail = "upload_fail"
     show_guide = "show_guide"
     showing_menu = "showing_menu"
     conversation_starter = "conversation_starter"
