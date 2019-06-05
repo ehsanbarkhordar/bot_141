@@ -1,26 +1,24 @@
 version: '3'
 services:
-  141_bot:
-#    image: registry2.bale.ai:2443/141_bot:0.0-1
-    image: 141_bot:0.0-5
-    container_name: 141_bot
+  bot_141:
+    image: bot_141
+    container_name: bot_141
     restart: always
     volumes:
-      - /home/docker/volumes/pg_141_bot/sqlite/:/141_bot_root/bot/files
+      - /home/ubuntu/volumes/bot_141/sqlite/:/bot_root/bot/files
     environment:
       # Config
       - BASE_URL=wss://api.bale.ai/v1/bots/
-      - TOKEN=da5b2817e583c88fa4a736d481693a6fcdbce700
+      - TOKEN=4de3376eb96e3c0c4905778ae22065dfefe10b7f
       - SYSTEM_LOCAL=fa_IR
       - RESENDING_MAX_TRY=5
       - REUPLOADING_MAX_TRY=5
       # Log config
-      - USE_GRAYLOG=2
-      - LOG_SOURCE=pg_141_bot
-      - GRAYLOG_HOST=192.168.21.113
+      - USE_GRAYLOG=0
+      - LOG_SOURCE=bot_141
+      - GRAYLOG_HOST=localhost
       - GRAYLOG_PORT=12201
       - LOG_LEVEL=20
-      - LOG_FACILITY_NAME=pg_template_bot_facility
-      - MONITORING_HASH=cabb3f498ac5a037f669f658f1be08c3
+      - LOG_FACILITY_NAME=bot_141
 
 
