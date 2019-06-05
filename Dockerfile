@@ -10,7 +10,7 @@ RUN apk add --update --no-cache g++ gcc libxslt-dev
 
 WORKDIR /bot_root
 
-COPY requirements2.txt ./requirements.txt
+COPY ./requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
 COPY ./ ./

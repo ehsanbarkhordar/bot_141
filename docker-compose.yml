@@ -9,7 +9,7 @@ services:
     environment:
       # Config
       - BASE_URL=wss://api.bale.ai/v1/bots/
-      - TOKEN=4de3376eb96e3c0c4905778ae22065dfefe10b7f
+      - TOKEN=da5b2817e583c88fa4a736d481693a6fcdbce700
       - SYSTEM_LOCAL=fa_IR
       - RESENDING_MAX_TRY=5
       - REUPLOADING_MAX_TRY=5
@@ -20,5 +20,3 @@ services:
       - GRAYLOG_PORT=12201
       - LOG_LEVEL=20
       - LOG_FACILITY_NAME=bot_141
-
-
